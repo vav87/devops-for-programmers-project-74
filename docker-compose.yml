@@ -1,7 +1,9 @@
 services:
   app:
+    image: vav87/devopsforprogrammersproject
+    command: npm test
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
     volumes:
       - ./app:/app

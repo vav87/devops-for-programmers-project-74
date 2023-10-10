@@ -1,6 +1,6 @@
 services:
   app:
-    command: npm run dev
+    command: bash -c 'sleep 3 && npm start'
     build:
       context: .
       dockerfile: Dockerfile

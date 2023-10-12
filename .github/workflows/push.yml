@@ -18,6 +18,10 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Copy .env
+        run: |
+          bash -c 'cp -v app/.env.example .env'
+
       - name: Run tests
         run: |
           make ci
